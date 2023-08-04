@@ -24,7 +24,7 @@ new Array(Math.floor(book.rating)).fill(0).map((_, index) => <FontAwesomeIcon ic
    }
 
 {
-    Number.isInteger(book.rating) ? '' : <FontAwesomeIcon icon="star-half-alt" key={index} />
+    !Number.isInteger(book.rating) && <FontAwesomeIcon icon="star-half-alt" />
 }
 
       </div>
