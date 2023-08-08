@@ -1,4 +1,5 @@
 import React from 'react' 
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Explore = () => {
 
@@ -9,9 +10,9 @@ return (
                 <h2>
                     Explore <span className='purple'>Books</span>
                 </h2>
-                <a href="/books">
+                <Link to="/books">
                     <button className='btn'>Explore Books</button>
-                </a>
+                </Link>
             </div>
         </div>
     </section>
