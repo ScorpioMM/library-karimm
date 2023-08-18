@@ -13,3 +13,5 @@ return (
 export default Rating;
 
 //yoo
+
+// YOOO LAMAOAOAOA I NEEDE TO GET BACKK
