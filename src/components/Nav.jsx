@@ -71,7 +71,4 @@ return (
 
 export default Nav;
 
-// . . IM trynna change that :) 
-
-// Be more humble. Amen.
-
+// Thanks for being more humble
