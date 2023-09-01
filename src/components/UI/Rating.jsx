@@ -24,3 +24,4 @@ export default Rating;
 // FAKE DATA
 
 //
+ // I NEED THOSE NOTES ASAPPP. 
