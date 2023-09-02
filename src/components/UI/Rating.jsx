@@ -25,3 +25,5 @@ export default Rating;
 
 //
  // I NEED THOSE NOTES ASAPPP. 
+
+ //AHHHHH
