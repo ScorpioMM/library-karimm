@@ -12,7 +12,7 @@ const BooksInfo = ({ books }) => {
             <Link to="/books" className="book__link">
               <FontAwesomeIcon icon="arrow-left" />
             </Link>
-            <Link to="/book" className="book__link">
+            <Link to="/books" className="book__link">
               <h2 className="book__selected--title--top">Books</h2>
             </Link>
           </div>
@@ -23,6 +23,9 @@ const BooksInfo = ({ books }) => {
             <div className="book__selected--description">
                <h2 className="book__selected--title">Cracking the Coding Interview</h2>
                <Rating rating="4.5" /> 
+               <div className="book_selected--price">
+
+               </div>
             </div>
           </div>
         </div>
