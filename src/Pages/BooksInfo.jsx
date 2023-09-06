@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
+import Price from "../components/UI/Price";
 import Rating from "../components/UI/Rating";
 
 const BooksInfo = ({ books }) => {
@@ -24,8 +25,22 @@ const BooksInfo = ({ books }) => {
                <h2 className="book__selected--title">Cracking the Coding Interview</h2>
                <Rating rating="4.5" /> 
                <div className="book_selected--price">
-
+<Price originalPrice={50} salePrice={20}/> 
                </div>
+               <div className="book__summary">
+                <div className="book__summary--title">
+                    Summary 
+                </div>
+                <p className="book__summary__para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa doloremque, eaque ex magni repellendus praesentium atque animi eos veritatis facere esse similique sit architecto voluptate quos distinctio eum accusantium repudiandae!
+                </p>
+                <p className="book__summary__para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa doloremque, eaque ex magni repellendus praesentium atque animi eos veritatis facere esse similique sit architecto voluptate quos distinctio eum accusantium repudiandae!
+                </p>
+               </div>
+               <button className="btn">
+                Add to Cart
+               </button>
             </div>
           </div>
         </div>
