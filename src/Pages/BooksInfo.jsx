@@ -25,28 +25,28 @@ const BooksInfo = ({ books }) => {
           <div className="book__selected">
             <figure className="book__selected--figure">
               <img
-                src="https://covers.openlibrary.org/b/id/8091016-L.jpg"
+                src={book.url}
                 alt=""
                 className="book__selected--img"
               />
             </figure>
             <div className="book__selected--description">
               <h2 className="book__selected--title">
-                Cracking the Coding Interview
+                {book.title}
               </h2>
-              <Rating rating="4.5" />
+              <Rating rating={book.rating} />
               <div className="book_selected--price">
-                <Price originalPrice={50} salePrice={20} />
+                <Price originalPrice={book.originalPrice} salePrice={book.salePrice} />
               </div>
               <div className="book__summary">
-                <div className="book__summary--title">Summary</div>
-                <p className="book__summary__para">
+                <h3 className="book__summary--title">Summary</h3>
+                <p className="book__summary--para">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
                   doloremque, eaque ex magni repellendus praesentium atque animi
                   eos veritatis facere esse similique sit architecto voluptate
                   quos distinctio eum accusantium repudiandae!
                 </p>
-                <p className="book__summary__para">
+                <p className="book__summary--para">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
                   doloremque, eaque ex magni repellendus praesentium atque animi
                   eos veritatis facere esse similique sit architecto voluptate
