@@ -1,3 +1,4 @@
+import { faBookJournalWhills } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -7,7 +8,8 @@ import Rating from "../components/UI/Rating";
 
 const BooksInfo = ({ books }) => {
     const {id} = useParams(); 
-    console.log(id)
+    const book = books.find(book => +book.id === +id)
+
   return (
     <div id="books__body">
       <main id="books__main">
