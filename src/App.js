@@ -8,10 +8,15 @@ import Books from "./Pages/Books";
 import {books} from "./data";
 import BooksInfo from "./Pages/BooksInfo";
 import Cart from "./Pages/Cart";
+import { useState } from "react";
 
 // import Book from './components/UI/Book';
 
 function App() {
+  const [cart, setCart] = useState ([])
+  function addToCart() {
+    console.log('add to cart')
+  }
   return (
     <Router>
       <div className="App">
