@@ -35,6 +35,8 @@ const Cart = () => {
                     </div>
                 </div>
             </div>
+            <div className="total">
+                <div className="total__item total__tax">
           </div>
         </div>
       </main>
