@@ -37,6 +37,18 @@ const Cart = () => {
             </div>
             <div className="total">
                 <div className="total__item total__tax">
+                    <span>Tax</span>
+                    <span>$1.00</span>
+                </div>
+                <div className="total__item total__price">
+                    <span>Total</span>
+                    <span>$10.00</span>
+                </div>
+                <button className="btn btn__checkout no-cursor"
+                onClick={() => alert('Havent got around to doing this :(')}>
+                    Proceed to checkout
+                </button>
+            </div>
           </div>
         </div>
       </main>
