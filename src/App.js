@@ -14,28 +14,14 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [cart, setCart] = useState ([])
-  function addToCart(book) {
-    const dupeItem = cart.find(item => +item.id === +book.id)
-    if (dupeItem){
-    
-setCart (cart.map(item => { 
-  if (item.id === dupeItem.id ) {
-    return {
 
-      ...item,
-      quantity:  item.quantity + 1,
-      
-    }
-  }
-else {
-  return item
+
+  function addToCart(book) {
+  setCart([...cart, book])
 }
-}))
-    }
-   else {
-    setCart ([...cart, {...book, quanitity: 1}])
-   }
-  }
+
+    
+
 
 useEffect(() => {
   console.log(cart)
@@ -58,7 +44,3 @@ useEffect(() => {
 
 export default App;
 
-
-// Brrrrr
-
-// BG=IG FCKING BRRRR

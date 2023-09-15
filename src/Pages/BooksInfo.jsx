@@ -1,15 +1,26 @@
 import { faBookJournalWhills } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import Book from "../components/UI/Book";
 import Price from "../components/UI/Price";
 import Rating from "../components/UI/Rating";
 
-const BooksInfo = ({ books, addToCart }) => {
+const BooksInfo = ({ books, addToCart, cart }) => {
   const { id } = useParams();
   const book = books.find((book) => +book.id === +id);
+
+  function addBookToCart(book) {
+      addToCart(book)
+      
+    }
+  
+    function bookExistOnCart() {
+        
+    // return cart.find((book) => book.id === +id)
+    }
+
 
   return (
     <div id="books__body">
@@ -51,7 +62,16 @@ const BooksInfo = ({ books, addToCart }) => {
                   quos distinctio eum accusantium repudiandae!
                 </p>
               </div>
-              <button className="btn" onClick={() => addToCart(book)}>Add to Cart</button>
+              {
+                bookExistOnCart() ? 
+
+                <Link to={`/cart`} className="book__link">
+                
+                (<button className="btn">Checkout</button>) 
+                 </Link>
+                :  (<button className="btn" onClick={() => addBookToCart(book)}>Add to Cart</button> )
+              }
+             
             </div>
           </div>
         </div>
@@ -78,15 +98,6 @@ const BooksInfo = ({ books, addToCart }) => {
 
 export default BooksInfo;
 
-// I love myself and I also belive in me :D
-
-// Un fifa antes del trabajo jeje\
-
-// EI A
-
-// I E
-
-// AI I
 
 // Im becoming wealthy and rich every single day.
 

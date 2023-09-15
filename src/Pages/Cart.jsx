@@ -36,6 +36,10 @@ const Cart = () => {
                 </div>
             </div>
             <div className="total">
+                <div className="total__item total__sub-total">
+                    <span>Subtotal</span>
+                    <span>$9.00</span>
+                </div>
                 <div className="total__item total__tax">
                     <span>Tax</span>
                     <span>$1.00</span>
