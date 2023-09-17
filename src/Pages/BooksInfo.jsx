@@ -13,15 +13,12 @@ const BooksInfo = ({ books, addToCart, cart }) => {
 
   function addBookToCart(book) {
       addToCart(book)
-      
     }
-  
-    function bookExistOnCart() {
+      
+    function bookExistsOnCart() {
         return cart.find((book) => book.id === +id)
     
     }
-
-
   return (
     <div id="books__body">
       <main id="books__main">
@@ -63,7 +60,7 @@ const BooksInfo = ({ books, addToCart, cart }) => {
                 </p>
               </div>
               {
-                bookExistOnCart() ? 
+                bookExistsOnCart() ? 
 
                 <Link to={`/cart`} className="book__link">
                 
@@ -102,3 +99,5 @@ export default BooksInfo;
 // Im becoming wealthy and rich every single day.
 
 // With each breath my body takes, It means Im grateful for everything
+
+
