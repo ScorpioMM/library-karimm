@@ -7,6 +7,7 @@ import Home from "./Pages/Home";
 import Books from "./Pages/Books";
 import {books} from "./data";
 import BooksInfo from "./Pages/BooksInfo";
+
 import Cart from "./Pages/Cart";
 import { useEffect, useState } from "react";
 
