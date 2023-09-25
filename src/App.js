@@ -7,8 +7,8 @@ import Home from "./Pages/Home";
 import Books from "./Pages/Books";
 import {books} from "./data";
 import BooksInfo from "./Pages/BooksInfo";
-
 import Cart from "./Pages/Cart";
+
 import { useEffect, useState } from "react";
 
 // import Book from './components/UI/Book';
@@ -34,7 +34,7 @@ useEffect(() => {
         <Nav />
         <Route path="/" exact component={Home} /> 
         <Route path="/books" exact render={() => <Books books={books} />}  /> 
-        <Route path="/books/:id" render={() => <BooksInfo books={books} addToCart={addToCart} /> } /> 
+        <Route path="/books/:id" render={() => <BooksInfo books={books}  addToCart={addToCart} cart={cart} /> } /> 
         <Route path="/cart" render={() => <Cart books={books} /> } /> 
       
         <Footer />
@@ -45,3 +45,5 @@ useEffect(() => {
 
 export default App;
 
+
+// dammm
