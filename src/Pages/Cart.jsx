@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cart = ({cart}) => {
+const Cart = ({cart, changeQuantity}) => {
   return (
     <div id="books__body">
       <main id="books__main">
@@ -26,13 +26,13 @@ const Cart = ({cart}) => {
                         <div className="cart__book">
                             <img src={book.url}/>
                             <div className="cart__book--info">
-                                <span className="cart__book--title">Crack the coding interview</span>
-                                <span className="cart__book--price">$66.66</span>
+                                <span className="cart__book--title">{book.title}</span>
+                                <span className="cart__book--price">${(book.salePrice || book.originalPrice).toFixed(2)}</span>
                                 <button className="cart__book--remove">Remove</button>
                             </div>
                         </div>
                         <div className="cart__quantity">
-                            <input type="number" min={0} max={99} class="cart__input"/>
+                            <input type="number" min={0} max={99}  value={book.quantity}  onChange={(event) => changeQuantity(book, event.target.value)} class="cart__input"/>
                         </div>
                         <div className="cart__total">
                             $10.00
@@ -44,7 +44,7 @@ const Cart = ({cart}) => {
                 </div>
             </div>
             <div className="total">
-                <div className="total__item total__sub-total">
+                <div className="total__item total__sub-total">    
                     <span>Subtotal</span>
                     <span>$9.00</span>
                 </div>
