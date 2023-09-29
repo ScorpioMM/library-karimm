@@ -1,4 +1,6 @@
-const Cart = () => {
+import React from "react";
+
+const Cart = ({cart}) => {
   return (
     <div id="books__body">
       <main id="books__main">
@@ -17,9 +19,12 @@ const Cart = () => {
                     <span className="cart__total">Price</span>
                 </div>
                 <div className="cart__body">
-                    <div className="cart__item">
+                    {
+                    cart.map((book) => {
+
+                        return (   <div className="cart__item">
                         <div className="cart__book">
-                            <img src="https://covers.openlibrary.org/b/id/8091016-L.jpg" className="cart__book--img" alt="" />
+                            <img src={book.url}/>
                             <div className="cart__book--info">
                                 <span className="cart__book--title">Crack the coding interview</span>
                                 <span className="cart__book--price">$66.66</span>
@@ -32,7 +37,10 @@ const Cart = () => {
                         <div className="cart__total">
                             $10.00
                         </div>
-                    </div>
+                    </div>)
+                    })
+                    }
+                 
                 </div>
             </div>
             <div className="total">
