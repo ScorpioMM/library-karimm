@@ -1,5 +1,6 @@
 import { faBookJournalWhills } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { upload } from "@testing-library/user-event/dist/upload";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
@@ -20,7 +21,7 @@ const BooksInfo = ({ books, addToCart, cart }) => {
   }
 
 
-  
+
   return (
     <div id="books__body">
       <main id="books__main">
@@ -97,3 +98,8 @@ const BooksInfo = ({ books, addToCart, cart }) => {
 export default BooksInfo;
 
 // Im becoming wealthy and rich every single day.
+
+
+// I NEED SOME PRACTICE
+
+

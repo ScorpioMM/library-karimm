@@ -1,6 +1,19 @@
-import React from "react";
+import { toHaveStyle } from "@testing-library/jest-dom/matchers";
+import React, { useEffect, useState } from "react";
 
 const Cart = ({cart, changeQuantity}) => {
+    const [total, setTotal] = useState();
+ useEffect(() => {
+    let price = 0; 
+    cart.forEach((item) => {
+        price += +(item.salePrice || item.originalPrice).toFixed(2)
+      });
+setTotal(price)
+ }, [cart])
+  
+ 
+
+
   return (
     <div id="books__body">
       <main id="books__main">
@@ -35,7 +48,7 @@ const Cart = ({cart, changeQuantity}) => {
                             <input type="number" min={0} max={99}  value={book.quantity}  onChange={(event) => changeQuantity(book, event.target.value)} class="cart__input"/>
                         </div>
                         <div className="cart__total">
-                            $10.00
+                           ${((book.salePrice || book.originalPrice) * book.quantity).toFixed(2)}
                         </div>
                     </div>)
                     })
@@ -54,7 +67,7 @@ const Cart = ({cart, changeQuantity}) => {
                 </div>
                 <div className="total__item total__price">
                     <span>Total</span>
-                    <span>$10.00</span>
+                    <span>${total}</span>
                 </div>
                 <button className="btn btn__checkout no-cursor"
                 onClick={() => alert('Havent got around to doing this :(')}>
