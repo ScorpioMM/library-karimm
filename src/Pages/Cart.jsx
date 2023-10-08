@@ -1,15 +1,15 @@
 import { toHaveStyle } from "@testing-library/jest-dom/matchers";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const Cart = ({cart, changeQuantity}) => {
-    const [total, setTotal] = useState();
- useEffect(() => {
+ const total = () => {
     let price = 0; 
     cart.forEach((item) => {
-        price += +(item.salePrice || item.originalPrice).toFixed(2)
+        price += +(
+       (item.salePrice || item.originalPrice ) * item.quantity)
       });
-setTotal(price)
- }, [cart])
+return price;
+ }
   
  
 
@@ -59,15 +59,15 @@ setTotal(price)
             <div className="total">
                 <div className="total__item total__sub-total">    
                     <span>Subtotal</span>
-                    <span>$9.00</span>
+                    <span>${(total() * 0.9).toFixed(2)}</span>
                 </div>
                 <div className="total__item total__tax">
                     <span>Tax</span>
-                    <span>$1.00</span>
+                    <span>${(total() * 0.1).toFixed(2)}</span>
                 </div>
                 <div className="total__item total__price">
                     <span>Total</span>
-                    <span>${total}</span>
+                    <span>${total().toFixed(2)}</span>
                 </div>
                 <button className="btn btn__checkout no-cursor"
                 onClick={() => alert('Havent got around to doing this :(')}>
