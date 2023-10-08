@@ -36,9 +36,41 @@ function App() {
     ) 
   }
 
+
+
+function removeItem(item) {
+  setCart(cart.filter(book => book.id !== item.id))
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    useEffect(() => {
     console.log(cart);
   }, [cart]);
+
+
+
+
+
+
+
+
 
   return (
     <Router>
@@ -52,7 +84,7 @@ function App() {
             <BooksInfo books={books} addToCart={addToCart} cart={cart} />
           )}
         />
-        <Route path="/cart" render={() => <Cart books={books} cart={cart} changeQuantity={changeQuantity} />}  />
+        <Route path="/cart" render={() => <Cart books={books} cart={cart} changeQuantity={changeQuantity} removeItem={removeItem} />}  />
 
         <Footer />
       </div>
