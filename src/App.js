@@ -46,7 +46,7 @@ function removeItem(item) {
 
 function numberOfItems () { 
   let counter = 0;
-  cart.forEacht(item => { 
+  cart.forEach(item => { 
     counter += item.quantity
   })
   return counter
@@ -81,7 +81,7 @@ function numberOfItems () {
   return (
     <Router>
       <div className="App">
-        <Nav numberOfItems={numberOfItems} />
+        <Nav numberOfItems={numberOfItems()} />
         <Route path="/" exact component={Home} />
         <Route path="/books" exact render={() => <Books books={books} />} />
         <Route
