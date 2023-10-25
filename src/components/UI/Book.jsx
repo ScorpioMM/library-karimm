@@ -72,3 +72,5 @@ export default Book;
 // BRRR UNTOCHABLE \\/// ehhelloooo
 
 // Lets jump into BACKEND aka FireBase
+
+// Aight, Firebase lol
